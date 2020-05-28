@@ -26,10 +26,16 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
+            "styles": [              
+              "node_modules/pikaday/css/pikaday.css",
+              "node_modules/@swimlane/ngx-datatable/assets/icons.css",
+              "node_modules/nouislider/distribute/nouislider.min.css",
               "src/styles.sass"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/pikaday/pikaday.js",
+              "node_modules/chart.js/dist/Chart.min.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {
