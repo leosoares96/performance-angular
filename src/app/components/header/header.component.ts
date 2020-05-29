@@ -5,11 +5,12 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.sass']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent{
 
-  constructor() { }
+  statusMenu:boolean = true;
 
-  ngOnInit() {
+  exibirMenu(){
+    this.statusMenu = !this.statusMenu;
   }
 
 }

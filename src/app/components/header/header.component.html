@@ -1,5 +1,30 @@
 <header>
-  <ps-ico ps-size="sm" ps-ico="menu"></ps-ico>
+  <ps-ico ps-size="sm" ps-ico="menu" (click)='exibirMenu()'></ps-ico>
   <img src="./assets/images/icone.png">
   <h4 ps-title ps-heading="5">PERFORMANCE UNIFICADO</h4>
 </header>
+
+<nav [className]="statusMenu ? 'animacaofechardiv' : 'animacaoabrirdiv'">
+    <ul ps-menu-vertical>
+        <li>
+          <a href="#">Performance de Filas</a>
+          <ul>
+              <li><a [routerLink]="['/filas/chat']" >Chat</a></li>
+              <li><a [routerLink]="['/filas/telefone']">Telefone</a></li>
+              <li><a [routerLink]="['/filas/whatsapp']">WhatsApp</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">Pesquisa de Satisfação</a>
+            <ul>
+                <li><a [routerLink]="['/pesquisa/chat']" >Chat</a></li>
+                <li><a [routerLink]="['/pesquisa/telefone']">Telefone</a></li>
+                <li><a [routerLink]="['/pesquisa/whatsapp']">WhatsApp</a></li>
+              </ul>
+          </li>
+          <li>
+              <a href="/glossario">Glossário</a>
+          </li>
+    </ul>
+</nav>

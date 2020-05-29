@@ -1,19 +1,59 @@
+// HEADER
 header
     width: 100%
+    height: 60px
     background-color: #fff
     box-shadow: 1px 1px 30px -4px rgba(0,0,0,0.3)
     position: fixed
     display: flex
     justify-content: center
     align-items: center
+    z-index: 2
     img
-        height: 35px
+        height: 30px
         margin-right: 10px
     h4
-        padding: 20px 0px
         font-weight: 500
+        font-size: 14px
         letter-spacing: 1px
     ps-ico
         cursor: pointer
         position: absolute
         left: 20px
+
+// NAVBAR
+nav
+    width: 250px
+    height: calc(100% - 60px)
+    display: block
+    z-index: 1
+    position: fixed
+    top: 60px
+    background-color: #fff
+    border-right: solid 1px #d2d2d2
+    .ps-menu-vertical
+        margin-top: 10px
+        li
+            border-bottom: solid 1px #d2d2d2
+
+
+.animacaofechardiv 
+    animation: animacaoFechar 1s forwards
+
+@keyframes animacaoFechar
+    from 
+       left: 0px
+    
+    to 
+       left: -250px
+    
+.animacaoabrirdiv
+    animation: animacaoAbrir 1s forwards
+
+
+@keyframes animacaoAbrir
+    from
+        left: -250px
+    
+    to 
+        left: 0px
