@@ -1,122 +1,105 @@
 <div ps-container>
-    <div ps-row>
-        <div ps-column ps-mobile="8" ps-tablet="2" ps-desktop-lg="3">
-            <ps-form-field [label]="'Gerência'">
-              <ps-form-multiselect [title]="'Selecione uma ou mais gerências'">
-                <select name="" multiple>
-                  <option value="1">PORTOMED GUARULHOS</option>
-                  <option value="2">PORTOMED LAPA</option>
-                  <option value="3">PORTOMED OSASCO</option>
-                  <option value="4">PORTOMED PAULISTA</option>
-                  <option value="5">PORTOMED PAULISTA</option>
-                  <option value="6">ALERGOLOGIA</option>
-                  <option value="7">ANGIOLOGIA E CIRURGIA VASCULAR</option>
-                  <option value="8">CARDIOLOGIA</option>
-                  <option value="9">CIRURGIA BUCO-MAXILAR</option>
-                  <option value="10">CIRURGIA DE CABEÇA E PESCOÇO</option>
-                </select>
-              </ps-form-multiselect>
-            </ps-form-field>
-        </div>
-        <div ps-column ps-mobile="8" ps-tablet="2" ps-desktop-lg="3">
-            <ps-form-field [label]="'Área'">
-              <ps-form-multiselect [title]="'Selecione uma ou mais áreas'">
-                <select name="" multiple>
-                  <option value="1">PORTOMED GUARULHOS</option>
-                  <option value="2">PORTOMED LAPA</option>
-                  <option value="3">PORTOMED OSASCO</option>
-                  <option value="4">PORTOMED PAULISTA</option>
-                  <option value="5">PORTOMED PAULISTA</option>
-                  <option value="6">ALERGOLOGIA</option>
-                  <option value="7">ANGIOLOGIA E CIRURGIA VASCULAR</option>
-                  <option value="8">CARDIOLOGIA</option>
-                  <option value="9">CIRURGIA BUCO-MAXILAR</option>
-                  <option value="10">CIRURGIA DE CABEÇA E PESCOÇO</option>
-                </select>
-              </ps-form-multiselect>
-            </ps-form-field>
-        </div>
-        <div ps-column ps-mobile="8" ps-tablet="2" ps-desktop-lg="3">
-            <ps-form-field [label]="'Operação'">
-              <ps-form-multiselect [title]="'Selecione uma ou mais operações'">
-                <select name="" multiple>
-                  <option value="1">PORTOMED GUARULHOS</option>
-                  <option value="2">PORTOMED LAPA</option>
-                  <option value="3">PORTOMED OSASCO</option>
-                  <option value="4">PORTOMED PAULISTA</option>
-                  <option value="5">PORTOMED PAULISTA</option>
-                  <option value="6">ALERGOLOGIA</option>
-                  <option value="7">ANGIOLOGIA E CIRURGIA VASCULAR</option>
-                  <option value="8">CARDIOLOGIA</option>
-                  <option value="9">CIRURGIA BUCO-MAXILAR</option>
-                  <option value="10">CIRURGIA DE CABEÇA E PESCOÇO</option>
-                </select>
-              </ps-form-multiselect>
-            </ps-form-field>
-        </div>
-        <div ps-column ps-mobile="8" ps-tablet="2" ps-desktop-lg="3">
-            <ps-form-field [label]="'Fila'">
-              <ps-form-multiselect [title]="'Selecione uma ou mais filas'">
-                <select name="" multiple>
-                  <option value="1">PORTOMED GUARULHOS</option>
-                  <option value="2">PORTOMED LAPA</option>
-                  <option value="3">PORTOMED OSASCO</option>
-                  <option value="4">PORTOMED PAULISTA</option>
-                  <option value="5">PORTOMED PAULISTA</option>
-                  <option value="6">ALERGOLOGIA</option>
-                  <option value="7">ANGIOLOGIA E CIRURGIA VASCULAR</option>
-                  <option value="8">CARDIOLOGIA</option>
-                  <option value="9">CIRURGIA BUCO-MAXILAR</option>
-                  <option value="10">CIRURGIA DE CABEÇA E PESCOÇO</option>
-                </select>
-              </ps-form-multiselect>
-            </ps-form-field>
-        </div>
+  <div ps-row>
+    <div ps-column ps-mobile="8" ps-tablet="3" ps-desktop-lg="3">
+      <ps-form-field label="Data de Inicio">
+        <ps-calendar calendarid="dataInicio" calendarmindate="01/01/2019"></ps-calendar>
+      </ps-form-field>
+    </div>
+    <div ps-column ps-mobile="8" ps-tablet="3" ps-desktop-lg="3">
+      <ps-form-field label="Data Final">
+        <ps-calendar calendarid="dataFim" calendarmindate="01/01/2019"></ps-calendar>
+      </ps-form-field>
+    </div>
+    <div ps-column ps-mobile="8" ps-tablet="4" ps-desktop-lg="2">
+      <ps-form-field [label]="'Período'">
+        <ps-form-select>
+          <select name="visao">
+            <option>Intervalo - Dia</option>
+            <option>Intervalo - Consolidado</option>
+            <option selected>Diário</option>
+            <option>Semanal</option>
+            <option>Mensal</option>
+          </select>
+        </ps-form-select>
+      </ps-form-field>
+    </div>
+    <div ps-column ps-mobile="8" ps-tablet="4" ps-desktop-lg="2">
+      <ps-form-field [label]="'Dimensionamento'">
+        <ps-form-select>
+          <select name="dim">
+            <option selected>Forecast</option>
+            <option>Refocast</option>
+            <option>Orçado</option>
+          </select>
+        </ps-form-select>
+      </ps-form-field>
+    </div>
+    <div ps-column ps-mobile="8" ps-tablet="4" ps-desktop-lg="2">
+      <ps-form-on-off [label]="'Consolidar Grupos:'">
+        <input type="checkbox" name="onoffswitch" checked />
+      </ps-form-on-off>
     </div>
 
-    <div ps-row>
-        <div ps-column ps-mobile="8" ps-tablet="3" ps-desktop-lg="2">
-          <ps-form-field label="Data de Inicio">
-            <ps-calendar calendarid="dataInicio" calendarmindate="01/01/2019" ></ps-calendar>
-          </ps-form-field>
-        </div>
-        <div ps-column ps-mobile="8" ps-tablet="3" ps-desktop-lg="2">
-          <ps-form-field label="Data Final">
-            <ps-calendar calendarid="dataFim" calendarmindate="01/01/2019" ></ps-calendar>
-          </ps-form-field>
-        </div>
-        <div ps-column ps-mobile="8" ps-tablet="4" ps-desktop-lg="2">
-            <ps-form-field [label]="'Período'">
-              <ps-form-select>
-                <select name="visao">
-                  <option>Intervalo - Dia</option>
-                  <option>Intervalo - Consolidado</option>
-                  <option selected>Diário</option>
-                  <option>Semanal</option>
-                  <option>Mensal</option>
-                </select>
-              </ps-form-select>
-            </ps-form-field>
-        </div>
-        <div ps-column ps-mobile="8" ps-tablet="4" ps-desktop-lg="2">
-            <ps-form-field [label]="'Dimensionamento'">
-              <ps-form-select>
-                <select name="dim">
-                  <option selected>Forecast</option>
-                  <option>Refocast</option>
-                  <option>Orçado</option>
-                </select>
-              </ps-form-select>
-            </ps-form-field>
-        </div>
-        <div ps-column ps-mobile="8" ps-tablet="4" ps-desktop-lg="2">
-            <ps-form-on-off [label]="'Consolidar Grupos:'">
-                <input type="checkbox" name="onoffswitch" checked/>
-            </ps-form-on-off>
-        </div>
-        <div ps-column ps-mobile="8" ps-tablet="4" ps-desktop-lg="2">
-            <input type="submit" ps-btn-primary value="Filtrar" />
-        </div>
-        
+  </div>
+
+  <div ps-row>
+    <div ps-column ps-mobile="8" ps-tablet="2" ps-desktop-lg="3">
+      <ps-form-field [label]="'Área'">
+        <ps-form-multiselect [title]="'Selecione uma ou mais áreas'">
+          <select name="" multiple>
+            <option value="1">PORTOMED GUARULHOS</option>
+            <option value="2">PORTOMED LAPA</option>
+            <option value="3">PORTOMED OSASCO</option>
+            <option value="4">PORTOMED PAULISTA</option>
+            <option value="5">PORTOMED PAULISTA</option>
+            <option value="6">ALERGOLOGIA</option>
+            <option value="7">ANGIOLOGIA E CIRURGIA VASCULAR</option>
+            <option value="8">CARDIOLOGIA</option>
+            <option value="9">CIRURGIA BUCO-MAXILAR</option>
+            <option value="10">CIRURGIA DE CABEÇA E PESCOÇO</option>
+          </select>
+        </ps-form-multiselect>
+      </ps-form-field>
     </div>
+    <div ps-column ps-mobile="8" ps-tablet="2" ps-desktop-lg="3">
+      <ps-form-field [label]="'Operação'">
+        <ps-form-multiselect [title]="'Selecione uma ou mais operações'">
+          <select name="" multiple>
+            <option value="1">PORTOMED GUARULHOS</option>
+            <option value="2">PORTOMED LAPA</option>
+            <option value="3">PORTOMED OSASCO</option>
+            <option value="4">PORTOMED PAULISTA</option>
+            <option value="5">PORTOMED PAULISTA</option>
+            <option value="6">ALERGOLOGIA</option>
+            <option value="7">ANGIOLOGIA E CIRURGIA VASCULAR</option>
+            <option value="8">CARDIOLOGIA</option>
+            <option value="9">CIRURGIA BUCO-MAXILAR</option>
+            <option value="10">CIRURGIA DE CABEÇA E PESCOÇO</option>
+          </select>
+        </ps-form-multiselect>
+      </ps-form-field>
+    </div>
+    <div ps-column ps-mobile="8" ps-tablet="2" ps-desktop-lg="3">
+      <ps-form-field [label]="'Fila'">
+        <ps-form-multiselect [title]="'Selecione uma ou mais filas'">
+          <select name="" multiple>
+            <option value="1">PORTOMED GUARULHOS</option>
+            <option value="2">PORTOMED LAPA</option>
+            <option value="3">PORTOMED OSASCO</option>
+            <option value="4">PORTOMED PAULISTA</option>
+            <option value="5">PORTOMED PAULISTA</option>
+            <option value="6">ALERGOLOGIA</option>
+            <option value="7">ANGIOLOGIA E CIRURGIA VASCULAR</option>
+            <option value="8">CARDIOLOGIA</option>
+            <option value="9">CIRURGIA BUCO-MAXILAR</option>
+            <option value="10">CIRURGIA DE CABEÇA E PESCOÇO</option>
+          </select>
+        </ps-form-multiselect>
+      </ps-form-field>
+
+    </div>
+    <div ps-column ps-mobile="8" ps-tablet="4" ps-desktop-lg="3">
+      <input type="submit" ps-btn-primary value="Filtrar" />
+    </div>
+  </div>
 </div>
